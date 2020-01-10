@@ -479,6 +479,7 @@ ivw_private_make_doxyfile(
     ALIASES ${aliases_list}
     TAG_FILE ${output_dir}/inviwo/inviwo.tag
     FILTER_PATTERNS ${filer_patterns_list}
+    ADDITIONAL_FLAGS "GENERATE_XML = YES"
     GENERATE_IMG
 )
 add_custom_target("DOXY-Clear"
@@ -563,3 +564,14 @@ foreach(mod IN LISTS modules)
         add_dependencies("DOXY-ALL" "DOXY-HELP-${${mod}_name}")
     endif()
 endforeach()
+
+#find_package(Sphinx REQUIRED)
+# 
+#set(SPHINX_SOURCE ${CMAKE_CURRENT_SOURCE_DIR})
+#set(SPHINX_BUILD ${CMAKE_CURRENT_BINARY_DIR}/sphinx)
+# 
+#add_custom_target(DOXY-Sphinx ALL
+#    COMMAND ${SPHINX_EXECUTABLE} -b html ${SPHINX_SOURCE} ${SPHINX_BUILD}
+#    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+#    COMMENT "Generating documentation with Sphinx"
+#)
