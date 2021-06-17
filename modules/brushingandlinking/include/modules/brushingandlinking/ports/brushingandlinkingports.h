@@ -81,7 +81,7 @@ public:
      * processor (Processor::process will be called for those). Defaults to InvalidOutput for all
      * targets (Row, Column) and all actions (filtering/selection/highlight).
      */
-    BrushingAndLinkingInport(std::string identifier,
+    BrushingAndLinkingInport(std::string_view identifier,
                              std::vector<BrushingTargetsInvalidationLevel> invalidationLevels = {
                                  {BrushingAndLinkingManager::AnyBrushingTarget,
                                   BrushingModifications(flags::any),
@@ -234,8 +234,7 @@ private:
 class IVW_MODULE_BRUSHINGANDLINKING_API BrushingAndLinkingOutport : public Outport {
 public:
     using type = void;
-
-    BrushingAndLinkingOutport(std::string identifier);
+    BrushingAndLinkingOutport(std::string_view identifier);
     virtual ~BrushingAndLinkingOutport() = default;
 
     BrushingAndLinkingManager& getManager();

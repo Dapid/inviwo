@@ -55,7 +55,7 @@ public:
     virtual TemplateProperty<T>* clone() const override = 0;
     virtual ~TemplateProperty() = default;
 
-    operator const T&() const;
+    operator const T &() const;
     const T& get() const;
     const T& operator*() const;
     const T* operator->() const;
@@ -96,7 +96,7 @@ TemplateProperty<T>& TemplateProperty<T>::operator=(const T& value) {
 }
 
 template <typename T>
-TemplateProperty<T>::operator const T&() const {
+TemplateProperty<T>::operator const T &() const {
     return value_;
 }
 

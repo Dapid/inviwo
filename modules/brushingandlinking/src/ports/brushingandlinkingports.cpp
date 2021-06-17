@@ -34,7 +34,7 @@
 namespace inviwo {
 
 BrushingAndLinkingInport::BrushingAndLinkingInport(
-    std::string identifier, std::vector<BrushingTargetsInvalidationLevel> invalidationLevels)
+    std::string_view identifier, std::vector<BrushingTargetsInvalidationLevel> invalidationLevels)
     : Inport(identifier), manager_(this, invalidationLevels) {
     setOptional(true);
 }
@@ -194,7 +194,7 @@ void BrushingAndLinkingInport::invalidate(InvalidationLevel invalidationLevel) {
     Inport::invalidate(manager_.getInvalidationLevel());
 }
 
-BrushingAndLinkingOutport::BrushingAndLinkingOutport(std::string identifier)
+BrushingAndLinkingOutport::BrushingAndLinkingOutport(std::string_view identifier)
     : Outport(identifier), manager_(this) {
     isReady_.setUpdate([this]() { return invalidationLevel_ == InvalidationLevel::Valid; });
 }
