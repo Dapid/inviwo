@@ -1,0 +1,17 @@
+[
+	{ "ref": "glm.imp" },
+	{ "ref":  "python3.8.imp"},
+	{ "ref": "qt5_11.imp"},
+	{ "ref": "cheaders.imp"},
+	{ "symbol": ["size_t", "private", "<cstddef>", "public"] },
+	{ "include": ["<__hash_table>", "private", "<unordered_map>", "public"] },
+	{ "include": ["<__locale>", "private", "<locale>", "public"] },
+	{ "include": ["<__mutex_base>", "private", "<mutex>", "public"] },
+	{ "include": ["<__nullptr>", "private", "<cstddef>", "public"] },
+	{ "include": ["<__errc>", "private", "<system_error>", "public"] },
+	{ "include": ["<__functional_base>", "private", "<functional>", "public"] },
+	{ "include": ["<__threading_support>", "private", "<thread>", "public"] },
+	{ "include": ["<__tree>", "private", "<map>", "public"] },
+	{ "include": ["<__tuple>", "private", "<tuple>", "public"] },
+	{ "include": ["<_ctype.h>", "private", "<cctype>", "public"] }
+]
