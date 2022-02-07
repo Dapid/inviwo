@@ -34,8 +34,6 @@
 
 namespace inviwo {
 
-TEST(Volume, volume_region_map_test) {
-    EXPECT_EQ(1, 1);
-}   
+TEST(Volume, volume_region_map_test) { EXPECT_EQ(1, 1); }
 
-}  // namespace inviwo 
+}  // namespace inviwo
